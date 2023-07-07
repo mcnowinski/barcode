@@ -28,7 +28,7 @@ def create_connection(db_file):
     
 def export_results_to_csv(conn):
     df = pd.read_sql_query("SELECT roster.student, roster.id, roster.sis_user_id, roster.section, roster.sis_login_id, COUNT(reward.sis_user_id) AS points FROM roster LEFT JOIN reward ON roster.sis_user_id = reward.sis_user_id GROUP BY roster.sis_user_id", conn)
-    df.to_csv(csv_path, index=False, header=['Student', 'ID', 'SIS User ID', 'SIS Login ID', 'Section', 'Points'])
+    df.to_csv(csv_path, index=False, header=['Student', 'ID', 'SIS User ID', 'Section', 'SIS Login ID', 'Points'])
     print('Database written to %s.'%csv_path)
 
 # main script
