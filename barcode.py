@@ -14,7 +14,7 @@ import pandas as pd
 db_path = r'./me2004rewards.db' # the database
 csv_path = r'./me2004rewards.csv' # the csv output
 # 2023/03/09 00:39:45 904643136
-barcode_regex = r'^(\d{4})/(\d{2})/(\d{2}) (\d{2}):(\d{2}):(\d{2}) (\d+)$' # barcode scanner output (tab separated)
+barcode_regex = r'^(\d{4})/(\d{2})/(\d{2}) (\d{2}):(\d{2}):(\d{2}) A(\d+)A$' # barcode scanner output (tab separated)
 
 # create a connection to the database
 def create_connection(db_file):
